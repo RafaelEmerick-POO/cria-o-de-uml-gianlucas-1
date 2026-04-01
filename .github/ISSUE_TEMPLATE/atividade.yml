@@ -12,7 +12,7 @@ body:
     attributes:
       label: Objetivo
       description: O que precisa ser concluido?
-      placeholder: Fechar diagrama, validar Mermaid Live, implementar classes, revisar README.
+      placeholder: Fechar diagrama, validar Mermaid Live, implementar classes, registrar evidencias.
     validations:
       required: true
 
@@ -21,7 +21,7 @@ body:
     attributes:
       label: Arquivos afetados
       description: Quais arquivos devem mudar?
-      placeholder: Ex.: docs/diagrama_classe.md, docs/modelo_inicial.mmd, src_cpp/equipamento.cpp
+      placeholder: Ex.: docs/diagrama_classe.md, docs/modelo_inicial.mmd, src_cpp/main.cpp
     validations:
       required: true
 

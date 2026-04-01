@@ -1,10 +1,10 @@
-# Cenario 04 - Modelagem UML com GitHub Classroom
+# Cenario 4 - Modelagem UML: laboratorio de ensaios
 
 ## Objetivos de aprendizagem
 
-- Modelar um problema usando diagrama de classes UML em Mermaid.
-- Praticar o fluxo de GitHub Classroom com issue, branch, commit e pull request.
-- Traduzir parte do modelo para um esqueleto inicial em C++ ou Python.
+- Modelar um problema com diagrama de classes UML em Mermaid.
+- Traduzir o modelo para uma implementacao inicial em `C++` ou `Python`.
+- Registrar a entrega com `issue`, `branch`, `commit`, `pull request` e `AI_LOG.md`.
 
 **Tempo estimado:** 2h a 4h
 
@@ -12,157 +12,80 @@
 
 ## 1. Contexto
 
-Voce recebeu este repositorio starter pelo GitHub Classroom.
+Este repositorio e o **starter do aluno** para a atividade.
 
-O foco desta atividade nao e apenas desenhar um diagrama. O foco e aprender a trabalhar como em um fluxo real:
+Aqui voce encontra apenas os arquivos que precisa usar na entrega.
+Configuracao de assignment, autograding e rubrica do professor ficam fora deste repositorio.
 
-- ler um problema;
-- criar cards;
-- trabalhar em branch;
-- registrar commits;
-- abrir pull request com evidencia.
-
-O dominio desta atividade e um **laboratorio de ensaios** com equipamentos, sensores e ordens de calibracao.
+O dominio do problema e um **laboratorio de ensaios** com equipamentos, sensores e ordens de calibracao.
 
 ---
 
 ## 2. O que deve ser entregue
 
-- `docs/diagrama_classe.md` preenchido.
-- `docs/modelo_inicial.mmd` revisado ou substituido pelo seu diagrama final.
+- `docs/diagrama_classe.md` preenchido com o diagrama final e as justificativas.
+- `docs/modelo_inicial.mmd` revisado ou substituido pelo seu modelo final.
 - implementacao minima em **uma** linguagem:
   - `src_cpp/`, ou
   - `src_python/`
 - `AI_LOG.md` preenchido quando houver uso de IA.
-- pull request final com justificativa tecnica e evidencias.
+- `pull request` final com evidencias.
 
 ---
 
-## 3. Arquivos deste repositorio
+## 3. Estrutura do repositorio
 
-- `README.md`
-- `AI_LOG.md`
-- `docs/requisito_laboratorio.md`
-- `docs/diagrama_classe.md`
-- `docs/modelo_inicial.mmd`
+- `docs/requisito_laboratorio.md`: enunciado base do problema.
+- `docs/modelo_inicial.mmd`: ponto de partida para o diagrama.
+- `docs/diagrama_classe.md`: arquivo principal da sua entrega.
+- `src_cpp/`: trilha de implementacao em `C++`.
+- `src_python/`: trilha de implementacao em `Python`.
+- `AI_LOG.md`: rastreabilidade de uso de IA.
+
+### Regra importante
+
+Escolha apenas **uma** trilha de implementacao:
+
 - `src_cpp/`
 - `src_python/`
-- `.github/ISSUE_TEMPLATE/atividade.yml`
-- `.github/pull_request_template.md`
+
+Voce **nao** precisa entregar as duas linguagens.
 
 ---
 
-## 4. Problema proposto
-
-O laboratorio precisa controlar:
-
-- equipamentos de bancada;
-- sensores de temperatura;
-- ordens de calibracao;
-- tecnico responsavel pela execucao;
-- registro basico do estado operacional.
-
-Voce deve:
-
-1. ler o problema em `docs/requisito_laboratorio.md`;
-2. fechar um diagrama de classes em Mermaid;
-3. justificar os relacionamentos escolhidos;
-4. implementar pelo menos duas classes do modelo em C++ **ou** Python.
-
----
-
-## 5. Fluxo recomendado no GitHub Classroom
-
-1. Criar uma issue para o diagrama.
-2. Abrir uma branch para fechar o modelo UML.
-3. Fazer commits pequenos e objetivos.
-4. Abrir uma segunda issue para a implementacao inicial.
-5. Criar outra branch para a linguagem escolhida.
-6. Abrir um pull request final reunindo evidencias.
-
-### Sugestao de nomes de branch
-
-- `feat/diagrama-uml`
-- `feat/implementacao-cpp`
-- `feat/implementacao-python`
-- `docs/ajustes-readme`
-
-### Sugestao de mensagens de commit
-
-- `feat: fecha diagrama inicial em mermaid`
-- `feat: implementa equipamento e sensor em cpp`
-- `feat: implementa equipamento e sensor em python`
-- `docs: registra justificativas do modelo`
-
----
-
-## 6. Cards de issue
+## 4. Cards de issue
 
 | Card | Foco | Evidencia |
 |---|---|---|
-| Issue 1 - Fechar diagrama UML | classes, relacionamentos e cardinalidade | `docs/diagrama_classe.md` atualizado |
-| Issue 2 - Validar no Mermaid Live | sintaxe e renderizacao do diagrama | link ou print do Mermaid Live |
-| Issue 3 - Implementar 2 classes | traducao do modelo para C++ ou Python | execucao local |
-| Issue 4 - Documentar e rastrear | README, justificativas e AI_LOG | PR final |
+| Issue 1 - Fechar diagrama UML | classes, relacoes e cardinalidade | `docs/diagrama_classe.md` atualizado |
+| Issue 2 - Validar no Mermaid Live | sintaxe e renderizacao do diagrama | link ou print |
+| Issue 3 - Implementar 2 classes | traducao do modelo para `C++` ou `Python` | execucao local |
+| Issue 4 - Documentar e rastrear | evidencias e `AI_LOG.md` | PR final |
 
 ---
 
-## 7. Passo 1 - Aquece no Mermaid Live
+## 5. Como trabalhar
 
-Antes de editar os arquivos do repositorio:
+1. Leia `docs/requisito_laboratorio.md`.
+2. Use `docs/modelo_inicial.mmd` apenas como ponto de partida.
+3. Feche seu diagrama final em `docs/diagrama_classe.md`.
+4. Escolha uma linguagem e crie os arquivos necessarios em `src_cpp/` ou `src_python/`.
+5. Registre evidencias no `pull request`.
 
-1. abra `https://mermaid.live/`;
-2. cole o conteudo de `docs/modelo_inicial.mmd`;
-3. ajuste nomes, relacoes e multiplicidades;
-4. verifique se o diagrama renderiza sem erro;
-5. salve o link ou exporte uma imagem.
+### O que implementar
 
----
-
-## 8. Passo 2 - Feche o diagrama no repositorio
-
-Use `docs/diagrama_classe.md` para registrar:
-
-- o requisito resumido;
-- o bloco `mermaid` final;
-- a justificativa das relacoes;
-- a cardinalidade escolhida;
-- o link do Mermaid Live, se houver.
-
-### Requisitos minimos do diagrama
-
-- pelo menos `5` classes;
-- pelo menos `1` generalizacao ou realizacao;
-- pelo menos `1` composicao ou agregacao;
-- cardinalidade em pelo menos `3` relacoes;
-- pelo menos `2` atributos e `1` operacao nas classes principais.
-
----
-
-## 9. Passo 3 - Implemente duas classes
-
-Escolha **uma** trilha:
-
-- `src_cpp/`
-- `src_python/`
-
-Implemente pelo menos:
+Implemente pelo menos estas classes:
 
 - `Equipamento`
 - `SensorTemperatura`
 
-Se quiser ir alem, acrescente `OrdemCalibracao` ou `Tecnico`.
-
-### Regra importante
-
-A implementacao precisa respeitar o modelo que voce definiu no diagrama.
-
-Se o diagrama mudou, ajuste a implementacao.
-Se a implementacao mudou, ajuste o diagrama.
+Se quiser ampliar o modelo, voce pode acrescentar outras classes do dominio.
 
 ---
 
-## 10. Como executar
+## 6. Como executar
+
+Depois de criar seus arquivos na trilha escolhida:
 
 ### Opcao C++
 
@@ -179,18 +102,26 @@ python3 src_python/main.py
 
 ---
 
-## 11. Criterios de aceite
+## 7. Criterios de aceite
 
-- O diagrama UML atende aos requisitos minimos.
-- O diagrama foi testado no Mermaid Live.
-- O aluno justificou os principais relacionamentos.
-- Pelo menos duas classes foram implementadas em C++ ou Python.
-- O `README.md` e o `AI_LOG.md` estao coerentes com o trabalho entregue.
-- O pull request final apresenta evidencias tecnicas.
+- O diagrama final atende ao requisito do laboratorio.
+- O diagrama foi validado no Mermaid Live ou em ferramenta equivalente.
+- Ha justificativa para as principais relacoes e cardinalidades.
+- Pelo menos duas classes foram implementadas em uma linguagem.
+- O `AI_LOG.md` esta preenchido quando houve uso de IA.
+- O `pull request` final apresenta evidencias tecnicas.
+
+### Minimo esperado no diagrama
+
+- pelo menos `5` classes;
+- pelo menos `1` generalizacao ou realizacao;
+- pelo menos `1` composicao ou agregacao;
+- cardinalidade em pelo menos `3` relacoes;
+- pelo menos `2` atributos e `1` operacao nas classes principais.
 
 ---
 
-## 12. Politica de IA
+## 8. Politica de IA
 
 IA pode ser usada como apoio, mas a solucao precisa ser entendida.
 
@@ -203,11 +134,24 @@ IA pode ser usada como apoio, mas a solucao precisa ser entendida.
 
 ---
 
-## 13. Referencias
+## 9. Mini-caso pratico
+
+Uma equipe precisa modelar digitalmente um laboratorio de ensaios. Antes de codificar o sistema, ela fecha um diagrama UML, decide as relacoes entre equipamentos, sensores e ordens, e so depois implementa duas classes para validar a modelagem.
+
+---
+
+## 10. Perguntas de revisao rapida
+
+1. Por que o diagrama precisa vir antes da implementacao?
+2. O que a cardinalidade revela sobre o dominio?
+3. Por que a entrega deve escolher apenas uma trilha de linguagem?
+
+---
+
+## 11. Referencias
 
 - https://mermaid.live/
 - https://mermaid.js.org/syntax/classDiagram.html
-- https://docs.github.com/en/get-started/writing-on-github
 - https://docs.github.com/en/pull-requests
 - https://docs.github.com/en/education/manage-coursework-with-github-classroom
 - https://en.cppreference.com/w/cpp/language/classes

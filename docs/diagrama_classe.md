@@ -12,36 +12,9 @@ Cole aqui o link do diagrama validado no editor online.
 
 ```mermaid
 classDiagram
-    class Equipamento {
-        -tag: string
-        -descricao: string
-        -ativo: bool
-        +ligar() void
-        +desligar() void
-        +exibirResumo() void
-    }
-
-    class SensorTemperatura {
-        -valorAtual: double
-        +atualizarLeitura(valor: double) void
-    }
-
-    class OrdemCalibracao {
-        -codigo: string
-        -status: string
-        +abrir() void
-        +fechar() void
-    }
-
-    class Tecnico {
-        -nome: string
-        -matricula: string
-        +assinarOrdem() void
-    }
-
-    Equipamento <|-- SensorTemperatura
-    Equipamento "1" o-- "0..*" OrdemCalibracao : possui
-    OrdemCalibracao --> "1" Tecnico : atribuida
+    %% Substitua este bloco pelo seu diagrama final.
+    %% Dica: comece por Equipamento, SensorTemperatura,
+    %% OrdemCalibracao, Tecnico e mais uma classe do dominio.
 ```
 
 ## 4. Justificativa das relacoes
@@ -63,3 +36,11 @@ Marque a trilha usada:
 ## 6. Evidencias de execucao
 
 Cole aqui a saida do terminal, prints ou observacoes da execucao.
+
+## 7. Checklist rapido
+
+- [ ] O diagrama tem pelo menos `5` classes.
+- [ ] O diagrama tem pelo menos `1` generalizacao ou realizacao.
+- [ ] O diagrama tem pelo menos `1` composicao ou agregacao.
+- [ ] O diagrama tem cardinalidade em pelo menos `3` relacoes.
+- [ ] A implementacao foi feita em apenas uma linguagem.

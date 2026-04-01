@@ -13,7 +13,6 @@
 - [ ] Diagrama atualizado em `docs/diagrama_classe.md`
 - [ ] Mermaid Live validado
 - [ ] Implementacao minima concluida
-- [ ] README revisado
 - [ ] AI_LOG atualizado
 
 ## Observacoes
