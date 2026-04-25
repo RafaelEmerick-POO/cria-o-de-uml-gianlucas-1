@@ -8,24 +8,46 @@
 
 ## 2. Link do Mermaid Live
 
-Cole aqui o link do diagrama validado.
+https://mermaid.ai/d/2f9fc0e1-5db8-4b22-914d-14074c0cd093
 
 ## 3. Diagrama final em Mermaid
 
 ```mermaid
 classDiagram
-    %% Substitua este bloco pelo seu diagrama final.
+    class Equipamento {
+        -_tag: str
+        -_descricao: str
+        -_ativo: bool
+        +__init__(tag: str, descricao: str, ativo: bool)
+        +ligar(): void
+        +desligar(): void
+        +tag(): str
+        +exibir_resumo(): void
+    }
+
+    class SensorTemperatura {
+        -_valor_atual: float
+        +__init__(tag: str, descricao: str, ativo: bool, valor_atual: float)
+        +atualizar_leitura(novo_valor: float): void
+        +exibir_resumo(): void
+    }
+
+    Equipamento <|-- SensorTemperatura
 ```
 
 ## 4. Justificativa tecnica
 
-Explique, em frases curtas:
+-Classes identificadas: As duas classes mapeadas foram Equipamento (classe base) e SensorTemperatura (classe derivada).
 
-- quais classes foram identificadas;
-- como as relacoes aparecem no codigo;
-- quais operacoes merecem destaque no diagrama;
-- por que seu UML representa corretamente o codigo em `Python`.
+-Relacões: A herança é explícita na definição class SensorTemperatura(Equipamento):. O uso do super().__init__() confirma que a classe filha reaproveita a inicialização da classe mãe.
+
+-Operações em destaque: Destaque para o método __init__, que é o construtor padrão em Python. O método tag() na classe base, apesar de ser um property no código, foi modelado como um método público que devolve uma string.
+
+-Diferenças de Sintaxe: Os atributos foram modelados com o prefixo _ (ex: _tag), refletindo a convenção do Python para atributos fracamente privados/protegidos, mapeados com - no UML para indicar encapsulamento.
 
 ## 5. Evidencias
 
-Cole aqui a saida do terminal, prints ou observacoes da execucao do codigo em `Python`.
+$ python3 src_python/main.py
+[Equipamento] EQ-01 - Agitador principal - ativo=True
+[SensorTemperatura] TT-01 - valorAtual=23.5
+[SensorTemperatura] TT-01 - valorAtual=24.2
